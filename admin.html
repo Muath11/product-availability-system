@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم دكتور بروتين - الإدارة</title>
+    <link rel="stylesheet" href="admin-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="loader" class="loader-wrapper">
+        <img src="images/CUTDP.png" class="loader-logo" alt="Loading...">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <header class="admin-header">
+        <h1>لوحة تحكم الموظف</h1>
+        <div class="stats-bar">
+            <div class="stat-item">الكل: <span id="totalCount">0</span></div>
+            <div class="stat-item">متوفر: <span id="availableCount">0</span></div>
+            <div class="stat-item">منتهي: <span id="unavailableCount">0</span></div>
+        </div>
+    </header>
+    <div class="admin-nav">
+    <button id="nav-almanar" class="admin-nav-btn" onclick="selectAdminBranch('almanar')">فرع المنار</button>
+    <button id="nav-alajawid" class="admin-nav-btn" onclick="selectAdminBranch('alajawid')">فرع الأجاويد</button>
+</div>
+
+    <div class="admin-search-wrapper">
+        <input type="text" id="adminSearchInput" onkeyup="filterAdminFlavors()" placeholder="ابحث عن نكهة لتعديلها...">
+    </div>
+
+    <main class="admin-grid" id="adminList">
+        </main>
+
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>نكهات Bolero المتوفرة - دكتور بروتين</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="promo-banner">
+    <div class="marquee-text">
+        🔥 عرض خاص: احصل على الكرتون بـ ٢٤ ريال بدلاً من ٣٣ ريال! 🔥 &nbsp;&nbsp;&nbsp;&nbsp; 
+        🔥 عرض خاص: احصل على الكرتون بـ ٢٤ ريال بدلاً من ٣٣ ريال! 🔥 &nbsp;&nbsp;&nbsp;&nbsp; 
+        🔥 عرض خاص: احصل على الكرتون بـ ٢٤ ريال بدلاً من ٣٣ ريال! 🔥 &nbsp;&nbsp;&nbsp;&nbsp; 
+        🔥 عرض خاص: احصل على الكرتون بـ ٢٤ ريال بدلاً من ٣٣ ريال! 🔥
+    </div>
+</div>
+
+    <div id="loader" class="loader-wrapper">
+        <img src="images/CUTDP.png" class="loader-logo" alt="Loading...">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <header class="main-header">
+        <div class="branch-selector">
+    <button onclick="setBranch('almanar')" id="btn-manar" class="branch-btn active">فرع المنار</button>
+    <button onclick="setBranch('alajawid')" id="btn-ajawid" class="branch-btn">فرع الأجاويد</button>
+</div>
+        <div class="logo-container">
+            <img src="images/CUTDP.png" alt="دكتور بروتين" class="logo">
+        </div>
+<div class="hero-container">
+    <h1 class="brand-title">نكهات Bolero المميزة</h1>
+    <p class="brand-description">
+        ارتقِ بتجربة شرب الماء مع نكهاتنا المنعشة.. 
+        <span>خالية تماماً من السعرات الحرارية والسكر</span>
+    </p>
+    <div class="title-underline"></div>
+</div>
+        
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" onkeyup="filterFlavors()" placeholder="ابحث عن نكهتك المفضلة...">
+                <span class="search-icon">🔍</span>
+            </div>
+        </div>
+
+        <div class="filter-options">
+    <label class="switch-container">
+        <span>عرض المتوفر فقط</span>
+        <input type="checkbox" id="availableOnlyCheckbox" onchange="filterFlavors()">
+        <span class="slider"></span>
+    </label>
+
+
+    
+</div>
+
+<button onclick="togglePopup()" class="open-btn">تعرّف على المنتج</button>
+
+<div id="popup-overlay" class="overlay">
+    <div class="popup-content">
+        <h2>حوّل شرب الماء لعادة ممتعة مع بوليرو</h2>
+        <p>بوليرو هو منكّه ماء مصمم للي يحب الطعم لكن ما يبغى سكر أو سعرات زايدة.
+إذا تعاني من الملل من شرب الماء أو تحاول تلتزم بنمط صحي، بوليرو يعطيك نكهة منعشة بدون ما يخرّب دايتك.</p>
+        <button onclick="togglePopup()" class="close-btn">إغلاق</button>
+    </div>
+</div>
+
+<button onclick="toggleUsagePopup()" class="open-btn usage-btn">طريقة الاستخدام</button>
+
+<div id="usage-overlay" class="overlay" style="display: none;">
+    <div class="popup-content usage-style">
+        <h2>طريقةالإستخدام</h2>
+        <p>قم بإضافة محتوى الظرف إلى 500 مل من الماء، رج العبوة جيداً واستمتع بنكهة بوليرو المنعشة في أي وقت.</p>
+        <button onclick="toggleUsagePopup()" class="close-btn">إغلاق</button>
+    </div>
+</div>
+
+<div id="main-content">
+    </div>
+    </header>
+
+    <main class="container">
+        <div class="flavor-grid" id="flavorGrid">
+            </div>
+    </main>
+
+
+
+    <div id="branchModal" class="branch-modal">
+    <div class="modal-content">
+        <img src="images/CUTDP.png" class="modal-logo" alt="دكتور بروتين">
+        <h2>أهلاً بك في دكتور بروتين</h2>
+        <p>من أي فرع تود التسوق اليوم؟</p>
+        <div class="modal-buttons">
+            <button onclick="selectBranchAndClose('almanar')">فرع المنار</button>
+            <button onclick="selectBranchAndClose('alajawid')">فرع الأجاويد</button>
+        </div>
+    </div>
+</div>
+
+    <script type="module" src="script.js"></script>
+
+
+</body>
+</html>
